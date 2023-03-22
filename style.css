@@ -1,7 +1,89 @@
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
+body {
+  background-color: tomato;
+  margin: 0;
+}
+h1.Welcome {
+  font-size: large;
+  text-align: center;
+}
+#menu {
+  position: fixed;
+  width: 100%;
+  height: 35px;
+  background: white;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  align-items: center;
+  align-self: start;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+h1 {
+  text-align: center;
+  color: hsla(0, 0%, 0%, 0.994);
+}
+
+h1:before,
+h1:after {
+  background-color: black;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+h1:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+h1:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+iframe.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emoji-picker {
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.emoji-picker button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  margin-right: 5px;
+}
+img {
+  border-color: black;
+  border-style: groove;
+  border-radius: 5px;
 }
