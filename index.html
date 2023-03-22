@@ -138,10 +138,10 @@
           <br />
           <br />
           
-            <button class="emoji">😀</button>
-            <button class="emoji">😁</button>
-            <button class="emoji">😂</button>
-            <button class="emoji">😃</button>
+            <button class="emoji" onclick="new_emoji(event,this.innerHTML)">😀</button>
+            <button class="emoji" onclick="new_emoji(event,this.innerHTML)">😁</button>
+            <button class="emoji" onclick="new_emoji(event,this.innerHTML)">😂</button>
+            <button class="emoji" onclick="new_emoji(event,this.innerHTML)">😃</button>
           
           <label for="message">Message:</label>
           <textarea id="message" name="message" required></textarea>
@@ -153,27 +153,13 @@
       </div>
     </section>
 
+  
     <script>
-      const emojiButtonss = document.querySelectorAll('.emoji');
-      const myTextarea = document.getElementById('message');
-
-      emojiButtonss.forEach(button => {
-          button.addEventListener('click', () => {
-       const emoji = button.innerHTML;
-    myTextarea.value += emoji;
-  });
-});
-    </script>
-
-    <script>
-    const emojiButtons = document.querySelectorAll('.emoji');
-
-      emojiButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          const emoji = button.innerHTML;
-          // Insert the emoji into the input field or text area
-        });
-      });
+      function new_emoji(event, emoji){
+        event.preventDefault();
+      const text = document.getElementById('message');
+            text.value += emoji;
+    }
     </script>
 
     <script type="text/javascript">
